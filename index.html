@@ -2,146 +2,179 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="From India to Germany - Get accepted into German universities with our help." />
   <title>From India to Germany</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0; padding: 0; box-sizing: border-box;
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: url('https://unsplash.com/photos/a-large-stone-arch-with-statues-on-top-of-it-U7RAiwAvssY &auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-      background-size: cover;
       color: #1a1a1a;
+      background: #f9f9f9;
       line-height: 1.6;
-      min-height: 100vh;
-    }
-    <style>
-  body {
-    background-image: url('https://images.unsplash.com/photo-1580387979945-30c47251aeb1?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-</style>
-    main {
-      max-width: 900px;
-      background: white;
-      margin: 2rem auto 3rem auto;
-      padding: 2rem 3rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     }
     header {
-      background: black;
-      color: white;
+      background: #ffffff;
       padding: 2rem;
       text-align: center;
-      border-radius: 12px 12px 0 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      font-family: 'Playfair Display', serif;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
     }
     header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.3rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #222;
+      flex: 1 1 300px;
+      text-align: center;
     }
     header p {
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: #ddd;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #666;
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .header-img {
+      flex: 1 1 300px;
+      max-width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      display: block;
+      margin: 0 auto;
     }
     section {
-      margin-top: 2rem;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.05);
     }
     section h2 {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       margin-bottom: 1rem;
-      color: #222;
+      color: #333;
     }
     ul {
-      margin-left: 1.4rem;
-      margin-bottom: 1.4rem;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
     }
     ul li {
-      margin-bottom: 0.7rem;
+      margin-bottom: 0.75rem;
+    }
+    .section-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     .cta {
       text-align: center;
       margin-top: 2rem;
     }
-    .cta button {
+    .cta a, .cta button {
+      display: inline-block;
       background: #0077cc;
       color: white;
       padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border: none;
       border-radius: 6px;
+      text-decoration: none;
       font-weight: 600;
-      cursor: pointer;
       transition: background 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
     }
-    .cta button:hover {
+    .cta a:hover:not(.disabled) {
       background: #005fa3;
+    }
+    .cta button.disabled {
+      background: #999999;
+      cursor: not-allowed;
+      pointer-events: none;
+      position: relative;
+    }
+    .cta button.disabled:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 130%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: 10;
     }
     footer {
       text-align: center;
+      padding: 1rem;
       font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 2rem;
+      color: #888;
     }
-    @media (max-width: 650px) {
-      main {
-        margin: 1rem;
-        padding: 1.5rem;
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
       }
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
+      .header-img {
+        max-width: 90vw;
       }
     }
   </style>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>From India to Germany</h1>
-      <p>Your gateway to a German degree</p>
-    </header>
+  <header>
+    <h1>From India to Germany</h1>
+    <p>Your gateway to a German degree</p>
+    <img class="header-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Brandenburg Gate, Berlin" />
+  </header>
 
-    <section>
-      <h2>Are you thinking about moving to Germany?</h2>
-      <p>Getting a degree from a German university can be a great first step. We help you get accepted.</p>
-    </section>
+  <section>
+    <h2>Are you thinking about moving to Germany?</h2>
+    <p>Getting a degree from a German university can be a great first step. We help you get accepted.</p>
+  </section>
 
-    <section>
-      <h2>How We Help</h2>
-      <ul>
-        <li>We can help you get accepted at one of our partner institutions.</li>
-        <li>We have direct access to our partners’ student recruitment offices.</li>
-        <li>We help you prepare your application and guide you through the process.</li>
-      </ul>
-    </section>
+  <section>
+    <h2>How We Help</h2>
+    <img class="section-img" src="https://images.unsplash.com/photo-1542327897-6e1a8f9b0a6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Indian students having fun" />
+    <ul>
+      <li>We can help you get accepted at one of our partner institutions.</li>
+      <li>We have direct access to our partners’ student recruitment offices.</li>
+      <li>We help you prepare your application and guide you through the process.</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>See If You Qualify</h2>
-      <p>Fill out our quick questionnaire to find out if you qualify for one of our partner institutions. We will then guide you through the application process.</p>
-      <div class="cta">
-        <button disabled>Start Questionnaire</button>
-      </div>
-    </section>
+  <section>
+    <h2>See If You Qualify</h2>
+    <p>Fill out our quick questionnaire to find out if you qualify for one of our partner institutions. We will then guide you through the application process.</p>
+    <div class="cta">
+      <button class="disabled" data-tooltip="Available soon">Start Questionnaire</button>
+    </div>
+  </section>
 
-    <section>
-      <h2>Questions?</h2>
-      <p>If you have any questions or need support, please reach out via the questionnaire or check back soon for our contact form.</p>
-    </section>
+  <section>
+    <h2>Questions?</h2>
+    <p>If you have any questions or need support, please reach out via the questionnaire or check back soon for our contact form.</p>
+  </section>
 
-    <footer>
-      &copy; 2025 From India to Germany. All rights reserved.
-    </footer>
-  </main>
+  <footer>
+    &copy; 2025 From India to Germany. All rights reserved.
+  </footer>
 </body>
 </html>
