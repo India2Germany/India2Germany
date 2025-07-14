@@ -21,44 +21,21 @@
       padding: 2rem;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
       color: #222;
-      flex: 1 1 300px;
-      text-align: center;
     }
     header p {
       font-size: 1.2rem;
       margin-top: 0.5rem;
       color: #666;
-      flex: 1 1 300px;
-      text-align: center;
-    }
-    .header-img {
-      flex: 1 1 300px;
-      max-width: 320px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      display: block;
-      margin: 0 auto;
     }
     section {
       padding: 2rem;
       max-width: 800px;
       margin: auto;
-      background: white;
-      margin-bottom: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.05);
     }
     section h2 {
       font-size: 1.6rem;
@@ -72,19 +49,11 @@
     ul li {
       margin-bottom: 0.75rem;
     }
-    .section-img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
     .cta {
       text-align: center;
       margin-top: 2rem;
     }
-    .cta a, .cta button {
+    .cta a {
       display: inline-block;
       background: #0077cc;
       color: white;
@@ -93,34 +62,9 @@
       text-decoration: none;
       font-weight: 600;
       transition: background 0.3s ease;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
     }
-    .cta a:hover:not(.disabled) {
+    .cta a:hover {
       background: #005fa3;
-    }
-    .cta button.disabled {
-      background: #999999;
-      cursor: not-allowed;
-      pointer-events: none;
-      position: relative;
-    }
-    .cta button.disabled:hover::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      bottom: 130%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #333;
-      color: white;
-      padding: 6px 10px;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      white-space: nowrap;
-      opacity: 0.9;
-      pointer-events: none;
-      z-index: 10;
     }
     footer {
       text-align: center;
@@ -128,21 +72,12 @@
       font-size: 0.9rem;
       color: #888;
     }
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-      }
-      .header-img {
-        max-width: 90vw;
-      }
-    }
   </style>
 </head>
 <body>
   <header>
     <h1>From India to Germany</h1>
     <p>Your gateway to a German degree</p>
-    <img class="header-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Brandenburg Gate, Berlin" />
   </header>
 
   <section>
@@ -152,7 +87,6 @@
 
   <section>
     <h2>How We Help</h2>
-    <img class="section-img" src="https://images.unsplash.com/photo-1542327897-6e1a8f9b0a6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Indian students having fun" />
     <ul>
       <li>We can help you get accepted at one of our partner institutions.</li>
       <li>We have direct access to our partners’ student recruitment offices.</li>
@@ -164,7 +98,7 @@
     <h2>See If You Qualify</h2>
     <p>Fill out our quick questionnaire to find out if you qualify for one of our partner institutions. We will then guide you through the application process.</p>
     <div class="cta">
-      <button class="disabled" data-tooltip="Available soon">Start Questionnaire</button>
+      <a href="https://forms.gle/6M4u6Z3GZ6f7z7zz6" target="_blank">Start Questionnaire</a>
     </div>
   </section>
 
