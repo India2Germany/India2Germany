@@ -12,42 +12,19 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      min-height: 100vh;
-    }
-    .background-frame {
-      background-image: url('https://images.unsplash.com/photo-1580387979945-30c47251aeb1?auto=format&fit=crop&w=1920&q=80');
-      background-size: cover;
-      background-position: center;
-      padding: 3rem;
-      border: 10px solid white;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-      border-radius: 12px;
-      max-width: 1000px;
-      width: 100%;
-    }
-    .content {
-      background: #ffffffcc;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background-color: #ffcc00; /* darker yellow resembling German flag */
+      color: #1a1a1a;
+      line-height: 1.6;
     }
     header {
-      text-align: center;
-      margin-bottom: 2rem;
       background-color: #000;
       padding: 3rem 2rem;
+      text-align: center;
       color: white;
-      border-radius: 6px;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
-      color: #fff;
     }
     header p {
       font-size: 1.2rem;
@@ -55,7 +32,9 @@
       color: #ccc;
     }
     section {
-      margin-bottom: 2rem;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
     }
     section h2 {
       font-size: 1.6rem;
@@ -75,7 +54,7 @@
     }
     .cta a {
       display: inline-block;
-      background: #cc0000;
+      background: #cc0000; /* red button */
       color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 6px;
@@ -88,51 +67,47 @@
     }
     footer {
       text-align: center;
+      padding: 1rem;
       font-size: 0.9rem;
-      color: #666;
-      margin-top: 2rem;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <div class="background-frame">
-    <div class="content">
-      <header>
-        <h1>From India to Germany</h1>
-        <p>Your gateway to a German degree</p>
-      </header>
+  <header>
+    <h1>From India to Germany</h1>
+    <p>Your gateway to a German degree</p>
+  </header>
 
-      <section>
-        <h2>Are you thinking about moving to Germany?</h2>
-        <p>Getting a degree from a German university can be a great first step. We help you get accepted.</p>
-      </section>
+  <section>
+    <h2>Are you thinking about moving to Germany?</h2>
+    <p>Getting a degree from a German university can be a great first step. We help you get accepted.</p>
+  </section>
 
-      <section>
-        <h2>How We Help</h2>
-        <ul>
-          <li>We can help you get accepted at one of our partner institutions.</li>
-          <li>We have direct access to our partners’ student recruitment offices.</li>
-          <li>We help you prepare your application and guide you through the process.</li>
-        </ul>
-      </section>
+  <section>
+    <h2>How We Help</h2>
+    <ul>
+      <li>We can help you get accepted at one of our partner institutions.</li>
+      <li>We have direct access to our partners’ student recruitment offices.</li>
+      <li>We help you prepare your application and guide you through the process.</li>
+    </ul>
+  </section>
 
-      <section>
-        <h2>See If You Qualify</h2>
-        <p>Fill out our quick questionnaire to find out if you qualify for one of our partner institutions. We will then guide you through the application process.</p>
-        <div class="cta">
-          <a href="https://forms.gle/6M4u6Z3GZ6f7z7zz6" target="_blank">Contact one of our experts</a>
-        </div>
-      </section>
-
-      <section>
-        <h2>Questions?</h2>
-        <p>If you have any questions or need support, please reach out via the questionnaire or check back soon for our contact form.</p>
-      </section>
-
-      <footer>
-        &copy; 2025 From India to Germany. All rights reserved.
-      </footer>
+  <section>
+    <h2>See If You Qualify</h2>
+    <p>Fill out our quick questionnaire to find out if you qualify for one of our partner institutions. We will then guide you through the application process.</p>
+    <div class="cta">
+      <a href="https://forms.gle/6M4u6Z3GZ6f7z7zz6" target="_blank">Contact one of our experts</a>
     </div>
-  </div>
+  </section>
+
+  <section>
+    <h2>Questions?</h2>
+    <p>If you have any questions or need support, please reach out via the questionnaire or check back soon for our contact form.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 From India to Germany. All rights reserved.
+  </footer>
 </body>
 </html>
